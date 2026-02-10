@@ -6,9 +6,8 @@ const firebaseConfig = {
     authDomain: "pescherie-le-bonta.firebaseapp.com",
     projectId: "pescherie-le-bonta",
     storageBucket: "pescherie-le-bonta.firebasestorage.app",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID",
-    measurementId: "YOUR_MEASUREMENT_ID"
+    messagingSenderId: "84578968603",
+    appId: "1:84578968603:web:cb03020ef7f33d967a44be"
 };
 
 // Initialize Firebase
