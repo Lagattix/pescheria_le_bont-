@@ -155,11 +155,20 @@ document.querySelectorAll('.stat').forEach(stat => {
 // Add hover effect to product cards
 document.querySelectorAll('.product-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-8px) scale(1.02)';
+        this.style.transform = 'translateY(-12px) scale(1.02)';
     });
     
     card.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0) scale(1)';
+    });
+    
+    // Mouse tracking effect
+    card.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        this.style.setProperty('--mouse-x', `${x}%`);
+        this.style.setProperty('--mouse-y', `${y}%`);
     });
 });
 
